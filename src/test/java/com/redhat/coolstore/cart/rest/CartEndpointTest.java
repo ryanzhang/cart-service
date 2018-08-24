@@ -50,7 +50,7 @@ public class CartEndpointTest {
     @Before
     public void beforeTest() throws Exception {
         RestAssured.baseURI = String.format("http://localhost:%d/cart", port);
-        ReflectionTestUtils.setField(catalogService, null, "catalogServiceUrl", "localhost:" + wireMockRule.port(), null);
+        ReflectionTestUtils.setField(catalogService, null, "catalogServiceUrl", "http://localhost:" + wireMockRule.port(), null);
         initWireMockServer();
     }
 

@@ -38,7 +38,7 @@ public class CatalogServiceImplTest {
     @Before
     public void beforeTest() throws Exception {
         catalogService = new CatalogServiceImpl();
-        ReflectionTestUtils.setField(catalogService, "catalogServiceUrl", "localhost:" + wireMockRule.port(), null);
+        ReflectionTestUtils.setField(catalogService, "catalogServiceUrl", "http://localhost:" + wireMockRule.port(), null);
     }
 
     @Test
